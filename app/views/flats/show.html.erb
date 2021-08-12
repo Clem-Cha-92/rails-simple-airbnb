@@ -1,0 +1,26 @@
+<h1><%= @flat.name %></h1>
+<%= @flat.description %>
+
+<div>
+<h2>A bit more about this flat...</h2>
+</div>
+
+<div id="book-card">
+Book this place!
+
+</div>
+
+<div id="details-card">
+Details
+
+<i class="material-icons">group</i><%= @flat.number_of_guests %>
+<i class="material-icons">euro</i><%= @flat.price_per_night %>
+</div>
+
+<div id="share-card">
+Share
+<ul>
+<li><i class="fab fa-twitter-square"></i>Twitter</li>
+<li><i class="fab fa-facebook-square"></i>Facebook</li>
+</ul>
+</div>

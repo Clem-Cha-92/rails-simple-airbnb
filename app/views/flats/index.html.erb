@@ -1,0 +1,25 @@
+<h1>All our Flats</h1>
+
+
+<ul>
+  <% @flats.each do |flat| %>
+    <div class="flat-card" style="width: 18rem;">
+      <li>
+        <img src="https://source.unsplash.com/random" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h3 class="card-title"><%= flat.name %></h3>
+            <p class="card-text"><%= flat.description %></p>
+            <div id="flat-icons">
+              <br> <i class="material-icons">group</i> <%= flat.number_of_guests %>
+              <br> <i class="material-icons">euro</i> <%= flat.price_per_night %>
+            </div>
+          </div>
+          <div class="card-body">
+            <%= link_to "More info", edit_flat_path(flat), class:"card-link" %>
+            <%= link_to "Edit", flat_path(flat), class:"card-link" %>
+            <%= link_to "Remove", flat_path(flat), methode: :delete, ata: { confirm: "Are you sure?" }, class:"card-link" %>
+          </div>
+      </li>
+    </div>
+  <% end %>
+</ul>
